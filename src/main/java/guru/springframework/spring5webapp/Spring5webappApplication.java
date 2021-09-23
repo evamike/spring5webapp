@@ -14,8 +14,8 @@ public class Spring5webappApplication {
 	public static void main(String[] args) {
 		ApplicationContext applicationContext = SpringApplication.run(Spring5webappApplication.class, args);
 		MyController myController = (MyController)applicationContext.getBean("myController");
-		String helloWorld = myController.sayHello();
-		System.out.println("bean=" + helloWorld);
+		//String helloWorld = myController.sayHello();
+		System.out.println("primary bean=" + myController.sayHello());
 
 		System.out.println("--------Property");
 		PropertyInjectedController propertyInjectedController = (PropertyInjectedController)applicationContext.getBean("propertyInjectedController");
